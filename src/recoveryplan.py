@@ -35,9 +35,9 @@ if __name__ == '__main__':
     view = QWebView()
     frame = view.page().mainFrame()
     printer = ConsolePrinter()
-    view.setHtml(html)
+    # view.setHtml(html)
     # view.load(QUrl("http://jquerymobile.com/test/"));
-    # view.load(QUrl("E:/My Documents/python&emacs/jquery-jquery-mobile-cdf1d2c/docs/index.html"));
+    view.load(QUrl("index.html"));
     frame.addToJavaScriptWindowObject('printer', printer)
     frame.evaluateJavaScript("alert('Hello');")
     frame.evaluateJavaScript("printer.text('Goooooooooo!');")
