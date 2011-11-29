@@ -37,7 +37,7 @@ if __name__ == '__main__':
     printer = ConsolePrinter()
     # view.setHtml(html)
     # view.load(QUrl("http://jquerymobile.com/test/"));
-    view.load(QUrl("planer.html"));
+    view.load(QUrl("planner.html"));
     frame.addToJavaScriptWindowObject('printer', printer)
     # frame.evaluateJavaScript("alert('Hello');")
     frame.evaluateJavaScript("printer.text('Goooooooooo!');")
