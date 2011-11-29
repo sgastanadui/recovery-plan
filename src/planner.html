@@ -11,7 +11,7 @@
       <!-- Your custom js file(s) here -->
       <script src="../lib/jquery-1.7.min.js" type="text/javascript"></script>
       <script src="../lib/jquery.mobile-1.0rc2.min.js" type="text/javascript"></script>
-      <script src="jquery.mobile.dynamiccollapsible.js" type="text/javascript"></script>
+      <script src="jquery.mobile.recoveryplan.js" type="text/javascript"></script>
     </head>
     <body>
 
@@ -21,7 +21,7 @@
           <h1>康复计划</h1>
         </div><!-- /header -->
 
-        <div data-role="content" name="dynamiccollapsible">
+        <div data-role="content" name="recoveryplan">
           <p>Page content goes here.</p>
           <div data-role="collapsible-set" data-content-theme="b" data-theme="b">
 
@@ -209,9 +209,10 @@
 
       <script type="text/javascript">
         $(document).ready(function(){
-            // $("div").dynamiccollapsible();
-            $("div[name*='dynamiccollapsible']").dynamiccollapsible({
-                data: '{"h": "2011-11-27", "lastName": "Smith", "male": true, "age": 25, "address": {"streetAddress": "21 2nd Street", "city": "New York", "state": "NY", "postalCode": "10021"}, "phoneNumber": [{"type": "home", "number": "212 555-1234"}, {"type": "fax", "number": "646 555-4567"}]}'
+            $("div[name*='recoveryplan']").recoveryplan({
+                // dynamicdata: '{"name": "星宇", "male": true, "age": 25, "data of injury": "20110924", "data of surgery": "20111020", "exercise program": ["100次", "200次", "300次"], "plan": [{"data": [2011,10,21], "item": [{"index": 1, "flag": true}, {"index": 1, "flag": true}]}, {"data": [2011,10,21], "item": [{"index": 1, "flag": true}, {"index": 1, "flag": true}]}]}'
+
+                dynamicdata: '{"姓名": "星宇", "性别": true, "年龄": 25, "受伤日期": "20110924", "手术日期": "20111020", "锻炼项目": ["直抬腿100次", "侧抬腿200次", "踝崩运动300次"], "计划": [{"日期": [2011,10,21], "项目": [{"index": 1, "flag": true}, {"index": 1, "flag": true}], "肿胀": "", "日志": "今天感觉不错"}, {"日期": [2011,10,21], "项目": [{"index": 1, "flag": true}, {"index": 1, "flag": true}], "肿胀": "", "日志": "今天感觉不错"}]}'
             });
         });
       </script>

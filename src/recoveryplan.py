@@ -22,9 +22,9 @@ html = """
 </html>
 """
 
-class ConsolePrinter(QObject):
+class RecoveryPlan(QObject):
     def __init__(self, parent=None):
-        super(ConsolePrinter, self).__init__(parent)
+        super(RecoveryPlan, self).__init__(parent)
 
     @pyqtSlot(str)
     def text(self, message):
@@ -34,10 +34,14 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     view = QWebView()
     frame = view.page().mainFrame()
-    printer = ConsolePrinter()
+    printer = RecoveryPlan()
+    
+    view.setWindowTitle("RecoveryPlan")
+    view.resize(600, 600)
+
     # view.setHtml(html)
     # view.load(QUrl("http://jquerymobile.com/test/"));
-    view.load(QUrl("planner.html"));
+    view.load(QUrl("login.html"));
     frame.addToJavaScriptWindowObject('printer', printer)
     # frame.evaluateJavaScript("alert('Hello');")
     frame.evaluateJavaScript("printer.text('Goooooooooo!');")

@@ -20,28 +20,40 @@ jdata1 = json.loads("""[
 print(jdata1)
 
 jdata2 = json.loads("""{
-    "": "John",
-    "lastName": "Smith",
-    "male": true,
-    "age": 25,
-    "address":
-    {
-        "streetAddress": "21 2nd Street",
-        "city": "New York",
-        "state": "NY",
-        "postalCode": "10021"
-        },
-    "phoneNumber":
+    "姓名": "星宇",
+    "性别": true,
+    "年龄": 25,
+    "受伤日期": "20110924",
+    "手术日期": "20111020",
+    "锻炼项目":
+    [
+        "直抬腿100次",
+        "侧抬腿200次",
+        "踝崩运动300次"
+    ],
+    "计划":
     [
         {
-            "type": "home",
-            "number": "212 555-1234"
-            },
+            "日期": [2011,10,21],
+            "项目":
+                [
+                    {"index": 1, "flag": true},
+                    {"index": 1, "flag": true}
+                ],
+            "肿胀": "",
+            "日志": "今天感觉不错"
+        },
         {
-            "type": "fax",
-            "number": "646 555-4567"
-            }
-        ]
+            "日期": [2011,10,21],
+            "项目":
+                [
+                    {"index": 1, "flag": true},
+                    {"index": 1, "flag": true}
+                ],
+            "肿胀": "",
+            "日志": "今天感觉不错"
+        }
+    ]
     }""")
 
 try:
